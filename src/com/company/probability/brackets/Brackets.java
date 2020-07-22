@@ -38,8 +38,8 @@ public class Brackets {
         }
         // Check for two conditions:
         // First: if count of '(' will not be less than right and we will print ')' we will get result like this '())('
-        // by task conditions it's incorrect
-        // Second: There are one case when count of '(' can be less than '(' -- last symbol in string
+        // by task conditions it's wrong
+        // Second: There are one case when count when count of'(' can be less than '(' -- last symbol in string
         if (reservedLeftBracketsCount < reservedRightBracketsCount ||
                 (reservedLeftBracketsCount == 0 && reservedRightBracketsCount != 0)) {
             StringBuilder cur = new StringBuilder(currentCombination.toString());
