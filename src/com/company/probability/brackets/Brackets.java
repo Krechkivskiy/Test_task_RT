@@ -1,4 +1,4 @@
-package com.company.probability;
+package com.company.probability.brackets;
 
 import java.util.ArrayList;
 import java.util.Scanner;
