@@ -13,7 +13,6 @@ public class Brackets {
 
     private static void showAllPossibleCases(int coupleCount) {
         ArrayList<String> result = new ArrayList<>();
-        char leftBracket = '(';
         // right combination need starts with '(' and finish with ')'
         StringBuilder startCombination = new StringBuilder("(");
         int reservedLeftBracketsCount = coupleCount - 1;
