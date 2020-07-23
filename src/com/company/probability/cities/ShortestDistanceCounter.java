@@ -3,6 +3,7 @@ package com.company.probability.cities;
 import java.util.Set;
 
 public class ShortestDistanceCounter {
+
     private int minWay = 10000;
 
     public ShortestDistanceCounter() {
