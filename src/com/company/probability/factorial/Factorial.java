@@ -14,6 +14,7 @@ public class Factorial {
     }
 
     private static BigInteger findFactorial(long n) {
+        //  BigInteger needs to avoid problems with size of result number (more than 32 bit)
         BigInteger result = BigInteger.ONE;
         for (long i = 1; i <= n; i++) {
             result = result.multiply(BigInteger.valueOf(i));
