@@ -3,6 +3,7 @@ package com.company.probability.factorial;
 import java.math.BigInteger;
 
 public class Factorial {
+
     public static void main(String[] args) {
         int result = 0;
         BigInteger factorial = findFactorial(100);
