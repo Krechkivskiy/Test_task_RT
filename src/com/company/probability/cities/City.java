@@ -12,7 +12,7 @@ public class City {
     private int neighborsCount;
     private String name;
     //Made neighbors as hashmap where key is city and distance is value.
-    // In other case i would have created new entity which describes user - neighbor connection
+    // In other case i would have created new entity which describes city - neighbor connection
     private Map<City, Integer> neighbors;
 
     public int getIndex() {
