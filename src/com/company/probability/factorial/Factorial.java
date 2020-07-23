@@ -1,18 +1,28 @@
 package com.company.probability.factorial;
 
-import java.util.Scanner;
+import java.math.BigInteger;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class Factorial {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        findFactorial(scanner.nextInt());
+        int result = 0;
+        List<Long> digits = new ArrayList<>();
+        BigInteger factorial = findFactorial(100);
+        char[] chars = factorial.toString().toCharArray();
+        for (char aChar : chars) {
+            result = result + Character.getNumericValue(aChar);
+        }
+        System.out.println(result);
     }
 
-    private static int findFactorial(int i) {
-        int res = 1;
-        for (int j = 1; j <= i + 1; j++) {
-            res=res*j;
+    private static BigInteger findFactorial(long n) {
+        BigInteger result = BigInteger.ONE;
+        for (long i = 1; i <= n; i++) {
+            result = result.multiply(BigInteger.valueOf(i));
         }
-        return res;
+        return result;
     }
 }
