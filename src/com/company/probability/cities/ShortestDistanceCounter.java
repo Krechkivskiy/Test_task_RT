@@ -22,13 +22,15 @@ public class ShortestDistanceCounter {
     private void compute(City from, City to, int currentLength) {
         Set<City> cities = from.getNeighbors().keySet();
         for (City city : cities) {
-            if (city.equals(to)) {
-                if (from.getNeighbors().get(city) < minWay) {
-                    minWay = from.getNeighbors().get(city);
+            if (!city.equals(from)) {
+                if (city.equals(to)) {
+                    if (from.getNeighbors().get(city) < minWay) {
+                        minWay = from.getNeighbors().get(city);
+                    }
+                    break;
+                } else {
+                    compute(city, to, currentLength + from.getNeighbors().get(city));
                 }
-                break;
-            } else {
-                compute(city, to, currentLength + from.getNeighbors().get(city));
             }
         }
     }
